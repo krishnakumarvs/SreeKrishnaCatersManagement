@@ -8,6 +8,9 @@
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
     <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
   </SyntheticProperties>
+  <Events>
+    <EventHandler event="windowOpened" listener="java.awt.event.WindowListener" parameters="java.awt.event.WindowEvent" handler="formWindowOpened"/>
+  </Events>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
@@ -246,26 +249,31 @@
     </Component>
     <Component class="javax.swing.JCheckBox" name="jCheckBox1">
       <Properties>
+        <Property name="selected" type="boolean" value="true"/>
         <Property name="text" type="java.lang.String" value="Mango"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JCheckBox" name="jCheckBox2">
       <Properties>
+        <Property name="selected" type="boolean" value="true"/>
         <Property name="text" type="java.lang.String" value="Lemon"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JCheckBox" name="jCheckBox3">
       <Properties>
+        <Property name="selected" type="boolean" value="true"/>
         <Property name="text" type="java.lang.String" value="Injicurry/Puliyinji"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JCheckBox" name="jCheckBox4">
       <Properties>
+        <Property name="selected" type="boolean" value="true"/>
         <Property name="text" type="java.lang.String" value="Pachadi"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JCheckBox" name="jCheckBox5">
       <Properties>
+        <Property name="selected" type="boolean" value="true"/>
         <Property name="text" type="java.lang.String" value="Oolan"/>
       </Properties>
     </Component>
@@ -276,11 +284,13 @@
     </Component>
     <Component class="javax.swing.JCheckBox" name="jCheckBox7">
       <Properties>
+        <Property name="selected" type="boolean" value="true"/>
         <Property name="text" type="java.lang.String" value="paripp"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JCheckBox" name="jCheckBox8">
       <Properties>
+        <Property name="selected" type="boolean" value="true"/>
         <Property name="text" type="java.lang.String" value="Suchi Gothamb"/>
       </Properties>
     </Component>
@@ -291,31 +301,37 @@
     </Component>
     <Component class="javax.swing.JCheckBox" name="jCheckBox9">
       <Properties>
+        <Property name="selected" type="boolean" value="true"/>
         <Property name="text" type="java.lang.String" value="Kichadi"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JCheckBox" name="jCheckBox10">
       <Properties>
+        <Property name="selected" type="boolean" value="true"/>
         <Property name="text" type="java.lang.String" value="Thoran"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JCheckBox" name="jCheckBox11">
       <Properties>
+        <Property name="selected" type="boolean" value="true"/>
         <Property name="text" type="java.lang.String" value="Kaalan"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JCheckBox" name="jCheckBox12">
       <Properties>
+        <Property name="selected" type="boolean" value="true"/>
         <Property name="text" type="java.lang.String" value="Aviyal"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JCheckBox" name="jCheckBox13">
       <Properties>
+        <Property name="selected" type="boolean" value="true"/>
         <Property name="text" type="java.lang.String" value="MasaalaCurry"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JCheckBox" name="jCheckBox14">
       <Properties>
+        <Property name="selected" type="boolean" value="true"/>
         <Property name="text" type="java.lang.String" value="KootuCurry"/>
       </Properties>
     </Component>
@@ -326,81 +342,97 @@
     </Component>
     <Component class="javax.swing.JCheckBox" name="jCheckBox15">
       <Properties>
+        <Property name="selected" type="boolean" value="true"/>
         <Property name="text" type="java.lang.String" value="Rasam"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JCheckBox" name="jCheckBox16">
       <Properties>
+        <Property name="selected" type="boolean" value="true"/>
         <Property name="text" type="java.lang.String" value="Sambaaram"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JCheckBox" name="jCheckBox17">
       <Properties>
+        <Property name="selected" type="boolean" value="true"/>
         <Property name="text" type="java.lang.String" value="Pappadam"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JCheckBox" name="jCheckBox18">
       <Properties>
+        <Property name="selected" type="boolean" value="true"/>
         <Property name="text" type="java.lang.String" value="Paalada"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JCheckBox" name="jCheckBox19">
       <Properties>
+        <Property name="selected" type="boolean" value="true"/>
         <Property name="text" type="java.lang.String" value="NjaliPoovan Pazham"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JCheckBox" name="jCheckBox20">
       <Properties>
+        <Property name="selected" type="boolean" value="true"/>
         <Property name="text" type="java.lang.String" value="Sambaar"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JCheckBox" name="jCheckBox21">
       <Properties>
+        <Property name="selected" type="boolean" value="true"/>
         <Property name="text" type="java.lang.String" value="KattiParipp"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JCheckBox" name="jCheckBox22">
       <Properties>
+        <Property name="selected" type="boolean" value="true"/>
         <Property name="text" type="java.lang.String" value="Kaaya Varuthath"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JCheckBox" name="jCheckBox23">
       <Properties>
+        <Property name="selected" type="boolean" value="true"/>
         <Property name="text" type="java.lang.String" value="Sarkkara Puratti"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JCheckBox" name="jCheckBox24">
       <Properties>
+        <Property name="selected" type="boolean" value="true"/>
         <Property name="text" type="java.lang.String" value="Water"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JCheckBox" name="jCheckBox25">
       <Properties>
+        <Property name="selected" type="boolean" value="true"/>
         <Property name="text" type="java.lang.String" value="Vaazhayila"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JCheckBox" name="jCheckBox26">
       <Properties>
+        <Property name="selected" type="boolean" value="true"/>
         <Property name="text" type="java.lang.String" value="Paper Roll"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JCheckBox" name="jCheckBox27">
       <Properties>
+        <Property name="selected" type="boolean" value="true"/>
         <Property name="text" type="java.lang.String" value="Paper Glass"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JCheckBox" name="jCheckBox28">
       <Properties>
+        <Property name="selected" type="boolean" value="true"/>
         <Property name="text" type="java.lang.String" value="Ellu Unda"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JCheckBox" name="jCheckBox29">
       <Properties>
+        <Property name="selected" type="boolean" value="true"/>
         <Property name="text" type="java.lang.String" value="Paripp Vada"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JCheckBox" name="jCheckBox30">
       <Properties>
+        <Property name="selected" type="boolean" value="true"/>
         <Property name="text" type="java.lang.String" value="Vilambu Paathrangal"/>
       </Properties>
     </Component>
@@ -413,6 +445,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="OK"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

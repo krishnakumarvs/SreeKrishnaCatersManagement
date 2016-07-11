@@ -10,6 +10,9 @@
  */
 package OrderBooking;
 
+import javax.swing.JCheckBox;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author kakes
@@ -71,6 +74,11 @@ public class OrderFoodDetails extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                formWindowOpened(evt);
+            }
+        });
 
         jLabel1.setText("FOOD DETAILS");
 
@@ -85,73 +93,107 @@ public class OrderFoodDetails extends javax.swing.JFrame {
 
         jLabel3.setText("Pickle");
 
+        jCheckBox1.setSelected(true);
         jCheckBox1.setText("Mango");
 
+        jCheckBox2.setSelected(true);
         jCheckBox2.setText("Lemon");
 
+        jCheckBox3.setSelected(true);
         jCheckBox3.setText("Injicurry/Puliyinji");
 
+        jCheckBox4.setSelected(true);
         jCheckBox4.setText("Pachadi");
 
+        jCheckBox5.setSelected(true);
         jCheckBox5.setText("Oolan");
 
         jLabel4.setText("Paayasam");
 
+        jCheckBox7.setSelected(true);
         jCheckBox7.setText("paripp");
 
+        jCheckBox8.setSelected(true);
         jCheckBox8.setText("Suchi Gothamb");
 
         jLabel5.setText("Other Items");
 
+        jCheckBox9.setSelected(true);
         jCheckBox9.setText("Kichadi");
 
+        jCheckBox10.setSelected(true);
         jCheckBox10.setText("Thoran");
 
+        jCheckBox11.setSelected(true);
         jCheckBox11.setText("Kaalan");
 
+        jCheckBox12.setSelected(true);
         jCheckBox12.setText("Aviyal");
 
+        jCheckBox13.setSelected(true);
         jCheckBox13.setText("MasaalaCurry");
 
+        jCheckBox14.setSelected(true);
         jCheckBox14.setText("KootuCurry");
 
         jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
 
+        jCheckBox15.setSelected(true);
         jCheckBox15.setText("Rasam");
 
+        jCheckBox16.setSelected(true);
         jCheckBox16.setText("Sambaaram");
 
+        jCheckBox17.setSelected(true);
         jCheckBox17.setText("Pappadam");
 
+        jCheckBox18.setSelected(true);
         jCheckBox18.setText("Paalada");
 
+        jCheckBox19.setSelected(true);
         jCheckBox19.setText("NjaliPoovan Pazham");
 
+        jCheckBox20.setSelected(true);
         jCheckBox20.setText("Sambaar");
 
+        jCheckBox21.setSelected(true);
         jCheckBox21.setText("KattiParipp");
 
+        jCheckBox22.setSelected(true);
         jCheckBox22.setText("Kaaya Varuthath");
 
+        jCheckBox23.setSelected(true);
         jCheckBox23.setText("Sarkkara Puratti");
 
+        jCheckBox24.setSelected(true);
         jCheckBox24.setText("Water");
 
+        jCheckBox25.setSelected(true);
         jCheckBox25.setText("Vaazhayila");
 
+        jCheckBox26.setSelected(true);
         jCheckBox26.setText("Paper Roll");
 
+        jCheckBox27.setSelected(true);
         jCheckBox27.setText("Paper Glass");
 
+        jCheckBox28.setSelected(true);
         jCheckBox28.setText("Ellu Unda");
 
+        jCheckBox29.setSelected(true);
         jCheckBox29.setText("Paripp Vada");
 
+        jCheckBox30.setSelected(true);
         jCheckBox30.setText("Vilambu Paathrangal");
 
         jSeparator2.setOrientation(javax.swing.SwingConstants.VERTICAL);
 
         jButton1.setText("OK");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -320,6 +362,21 @@ public class OrderFoodDetails extends javax.swing.JFrame {
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox1ActionPerformed
+
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+        // TODO add your handling code here:
+        
+       // JCheckBox jCheckBox1=new JCheckBox();
+    
+       
+       
+       
+    }//GEN-LAST:event_formWindowOpened
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
