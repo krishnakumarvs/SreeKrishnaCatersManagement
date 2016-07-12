@@ -1,0 +1,18 @@
+Create object of Dbcon
+
+//code start
+Dbcon dbcon = new Dbcon();
+dbcon.select("select * from tbl_user");
+// code over
+
+where tbl_user is table inside our database.
+
+Similarly to insert any value to database, use 
+
+//code start
+dbcon.insert("insert into tbl_user (uname, pass) values('kk','123'));
+// code over
+
+
+
+** make sure you import Dbcon into your java file.
