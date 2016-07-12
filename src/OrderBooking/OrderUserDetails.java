@@ -11,8 +11,12 @@
 package OrderBooking;
 
 import db.Dbcon;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 /**
@@ -26,6 +30,11 @@ public class OrderUserDetails extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
     }
+
+  //  private OrderUserDetails(String id) {
+        
+    //    throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+   // }
 
     /** This method is called from within the constructor to
      * initialize the form.
@@ -281,7 +290,18 @@ public class OrderUserDetails extends javax.swing.JFrame {
        
         Dbcon dbcon = new Dbcon();
         dbcon.insert("insert into tbl_user(user_name,place,order_date,people_count,delivery_time,address,phone1,phone2,phone3,createdAt,updatedAt)values('"+name+"','"+place+"','"+selectedDate+"','"+count+"','"+hour+minute+periods+"','"+address+"','"+phone1+"','"+phone2+"','"+phone3+"','"+today+"','"+today+"')");
-
+        ResultSet rs=dbcon.select("select max(user_id) from tbl_user");
+        String id="";
+        try {
+            if(rs.next())
+            {
+                 id=rs.getString(1);
+            }
+        } catch (Exception e) {
+           
+        }
+         OrderFoodDetails ou=new OrderFoodDetails(id);
+        
        
         
         

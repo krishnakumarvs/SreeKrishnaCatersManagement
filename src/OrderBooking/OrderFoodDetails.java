@@ -10,6 +10,11 @@
  */
 package OrderBooking;
 
+import db.Dbcon;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JCheckBox;
 import javax.swing.JOptionPane;
 
@@ -20,9 +25,18 @@ import javax.swing.JOptionPane;
 public class OrderFoodDetails extends javax.swing.JFrame {
 
     /** Creates new form OrderFoodDetails */
+   
     public OrderFoodDetails() {
         initComponents();
         this.setLocationRelativeTo(null);
+    }
+    int userid;
+    int u_id;
+    
+    OrderFoodDetails(String id)
+    {
+        u_id=Integer.parseInt(id);
+      
     }
 
     /** This method is called from within the constructor to
@@ -84,7 +98,7 @@ public class OrderFoodDetails extends javax.swing.JFrame {
 
         jLabel2.setText("Rice");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "kuthari", "vella choru" }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox1ActionPerformed(evt);
@@ -375,6 +389,26 @@ public class OrderFoodDetails extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        Dbcon dbcon=new Dbcon();
+        //tbl_food.order_id=tbl_user.user_id;
+       ResultSet rs=dbcon.select("select * from tbl_user where user_id='"+u_id+"'");
+        try {
+            if(rs.next())
+            {
+                userid=rs.getInt(1);
+                
+               
+            }} catch (SQLException ex) {
+            Logger.getLogger(OrderFoodDetails.class.getName()).log(Level.SEVERE, null, ex);
+        }
+         String rice=jComboBox1.getSelectedItem().toString();
+         dbcon.update("update tbl_food set kuthari_rice='true' where order_id='"+userid+"'");
+                
+         if(jCheckBox1.isSelected())
+          {
+                dbcon.update("update tbl_food set mango_pickle='true' where order_id='"+userid+"' ");
+          }
+       
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
