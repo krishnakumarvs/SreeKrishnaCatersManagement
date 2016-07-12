@@ -10,6 +10,8 @@
  */
 package OrderBooking;
 
+import db.Dbcon;
+import java.util.Calendar;
 import java.util.Date;
 import javax.swing.JOptionPane;
 
@@ -221,6 +223,9 @@ public class OrderUserDetails extends javax.swing.JFrame {
         String phone3=Phone3.getText();
         String onlychars = "^\\p{Alpha}+$";
         String onlynum = "[0-9]+"; 
+        String hour=jComboBox1.getSelectedItem().toString();
+        String minute=jComboBox2.getSelectedItem().toString();
+        String periods=jComboBox3.getSelectedItem().toString();
         
         //String regex = "^\\+(?:[0-9] ?){6,14}[0-9]$"; 
         String phonereg = "((\\+*)((0[ -]+)*|(91 )*)(\\d{12}+|\\d{10}+))|\\d{5}([- ]*)\\d{6}";
@@ -271,6 +276,12 @@ public class OrderUserDetails extends javax.swing.JFrame {
         orderFoodDetails.setVisible(true);
         this.dispose();
              }
+         Date today = Calendar.getInstance().getTime();
+        //String dat=selectedDate.toString();
+       
+        Dbcon dbcon = new Dbcon();
+        dbcon.insert("insert into tbl_user(user_name,place,order_date,people_count,delivery_time,address,phone1,phone2,phone3,createdAt,updatedAt)values('"+name+"','"+place+"','"+selectedDate+"','"+count+"','"+hour+minute+periods+"','"+address+"','"+phone1+"','"+phone2+"','"+phone3+"','"+today+"','"+today+"')");
+
        
         
         
