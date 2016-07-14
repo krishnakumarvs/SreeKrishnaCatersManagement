@@ -389,11 +389,7 @@ public class OrderFoodDetails extends javax.swing.JFrame {
         Dbcon dbcon = new Dbcon();
         String kuthari = "", vellachoru = "";
         String rice = jComboBox1.getSelectedItem().toString();
-        if (rice == "kuthari") {
-            kuthari = rice;
-        } else if (rice == "vella choru") {
-            vellachoru = rice;
-        }
+       
         boolean f1 = injiCurry.isSelected();
         boolean f2 = lemon.isSelected();
         boolean f3 = mango.isSelected();
@@ -425,7 +421,7 @@ public class OrderFoodDetails extends javax.swing.JFrame {
         boolean f29 = vilambu_pathrangal.isSelected();
        
 
-        dbcon.insert("insert into tbl_food(order_id,kuthari_rice,vella_rice,injicurry,lemon_pickle,mango_pickle,pachadi,oolan,kichadi,thoran,kaalan,aviyal,masalacurry,kootucurry,kattiparipp,saambar,rasam,sambaaram,pappadam,njalipoovan,kaayavaruthath,sarkkarapuratti,paalada,suchigothamb_paayasam,paripp_payasam,water,vazhayila,paper_roll,paper_glass,ellunda,paripp_vada,vilambu_paathrangal)values('" + userid + "','" + kuthari + "','" + vellachoru + "','"+f1+"','"+f2+"','"+f3+"','"+f4+"','"+f5+"','"+f6+"','"+f7+"','"+f8+"','"+f9+"','"+f10+"','"+f11+"','"+f12+"','"+f13+"','"+f14+"','"+f15+"','"+f16+"','"+f17+"','"+f18+"','"+f19+"','"+f20+"','"+f21+"','"+f22+"','"+f23+"','"+f24+"','"+f25+"','"+f26+"','"+f27+"','"+f28+"','"+f29+"')");
+        dbcon.insert("insert into tbl_food(order_id,rice_type,injicurry,lemon_pickle,mango_pickle,pachadi,oolan,kichadi,thoran,kaalan,aviyal,masalacurry,kootucurry,kattiparipp,saambar,rasam,sambaaram,pappadam,njalipoovan,kaayavaruthath,sarkkarapuratti,paalada,suchigothamb_paayasam,paripp_payasam,water,vazhayila,paper_roll,paper_glass,ellunda,paripp_vada,vilambu_paathrangal)values('" + userid + "','" +rice+ "','"+f1+"','"+f2+"','"+f3+"','"+f4+"','"+f5+"','"+f6+"','"+f7+"','"+f8+"','"+f9+"','"+f10+"','"+f11+"','"+f12+"','"+f13+"','"+f14+"','"+f15+"','"+f16+"','"+f17+"','"+f18+"','"+f19+"','"+f20+"','"+f21+"','"+f22+"','"+f23+"','"+f24+"','"+f25+"','"+f26+"','"+f27+"','"+f28+"','"+f29+"')");
        //qry);
 
 

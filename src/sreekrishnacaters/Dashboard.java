@@ -12,6 +12,12 @@ package sreekrishnacaters;
 
 import ManageOrders.ViewOrders;
 import OrderBooking.OrderUserDetails;
+import db.Dbcon;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.Calendar;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -46,6 +52,11 @@ public class Dashboard extends javax.swing.JFrame {
         jMenuItem2 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                formWindowOpened(evt);
+            }
+        });
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -180,6 +191,36 @@ private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FI
         viewOrders.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+        // TODO add your handling code here:
+        Dbcon dbcon=new Dbcon();
+         DefaultTableModel dt=new DefaultTableModel(null,new String[]{"date","name","place","count"});
+          DefaultTableModel d=new DefaultTableModel(null,new String[]{"date","day","count"});
+        try
+        {
+           
+           
+           
+            ResultSet rs=dbcon.select("select * from tbl_user order by user_id desc");
+            while(rs.next())
+            {
+                dt.addRow(new String[]{rs.getString(4),rs.getString(2),rs.getString(3),rs.getString(5)});
+                d.addRow(new String[]{rs.getString(4),rs.getString(2),rs.getString(5)});
+                
+            
+            }
+             jTable1.setModel(dt);
+            jTable2.setModel(d);
+        }
+
+        catch(Exception e)
+        {
+            
+        }
+        
+
+    }//GEN-LAST:event_formWindowOpened
 
     /**
      * @param args the command line arguments
