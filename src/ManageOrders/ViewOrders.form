@@ -75,7 +75,7 @@
                       </Group>
                   </Group>
                   <Group type="102" attributes="0">
-                      <EmptySpace pref="22" max="32767" attributes="0"/>
+                      <EmptySpace pref="16" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
                               <Group type="103" groupAlignment="1" attributes="0">
@@ -99,66 +99,59 @@
                               <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="sambaaram" min="-2" pref="88" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
-                              <Component id="water" min="-2" pref="58" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="84" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="kaalan" min="-2" pref="58" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
-                              <Component id="pappadam" min="-2" pref="108" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="aviyal" min="-2" pref="58" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
-                              <Component id="njalipoovan" min="-2" pref="122" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                          </Group>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="sambaaram" alignment="0" min="-2" pref="88" max="-2" attributes="0"/>
                           <Group type="102" alignment="1" attributes="0">
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Group type="103" groupAlignment="1" attributes="0">
-                                          <Component id="kattiparipp" pref="26" max="32767" attributes="0"/>
-                                          <Component id="kootucurry" max="32767" attributes="0"/>
-                                          <Component id="masaalacurry" max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                              <Component id="kattiparipp" pref="26" max="32767" attributes="0"/>
+                                              <Component id="kootucurry" max="32767" attributes="0"/>
+                                              <Component id="masaalacurry" max="32767" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace min="78" pref="78" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace min="78" pref="78" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="kaayavaruthath" alignment="0" min="-2" pref="101" max="-2" attributes="0"/>
-                                          <Component id="sarkkarapuratti" alignment="0" min="-2" pref="160" max="-2" attributes="0"/>
-                                          <Component id="paalada" alignment="0" min="-2" pref="101" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="saambar" min="-2" pref="58" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="rasam" min="-2" pref="58" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="aviyal" min="-2" pref="58" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="saambar" min="-2" pref="58" max="-2" attributes="0"/>
-                                      <EmptySpace min="29" max="32767" attributes="0"/>
+                                      <Component id="kaalan" min="-2" pref="58" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <EmptySpace min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <Group type="103" groupAlignment="1" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="pappadam" min="-2" pref="108" max="-2" attributes="0"/>
+                                  <Component id="njalipoovan" min="-2" pref="122" max="-2" attributes="0"/>
+                                  <Component id="paripp" min="-2" pref="111" max="-2" attributes="0"/>
                                   <Component id="suchigothamb" min="-2" pref="131" max="-2" attributes="0"/>
-                                  <Group type="102" attributes="0">
-                                      <Component id="rasam" min="-2" pref="58" max="-2" attributes="0"/>
-                                      <EmptySpace max="32767" attributes="0"/>
-                                      <Component id="paripp" min="-2" pref="111" max="-2" attributes="0"/>
-                                  </Group>
+                                  <Component id="kaayavaruthath" alignment="0" min="-2" pref="101" max="-2" attributes="0"/>
+                                  <Component id="sarkkarapuratti" alignment="0" min="-2" pref="160" max="-2" attributes="0"/>
+                                  <Component id="paalada" alignment="0" min="-2" pref="101" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="paperRoll" pref="107" max="32767" attributes="0"/>
-                          <Component id="paperGlass" alignment="0" max="32767" attributes="0"/>
-                          <Component id="vazhayila" alignment="0" max="32767" attributes="0"/>
-                          <Component id="ellunda" alignment="0" max="32767" attributes="0"/>
-                          <Component id="parippVada" alignment="0" max="32767" attributes="0"/>
-                          <Component id="vilambu" alignment="0" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="paperRoll" pref="107" max="32767" attributes="0"/>
+                              <Component id="paperGlass" alignment="0" max="32767" attributes="0"/>
+                              <Component id="vazhayila" alignment="0" max="32767" attributes="0"/>
+                              <Component id="ellunda" alignment="0" max="32767" attributes="0"/>
+                              <Component id="parippVada" alignment="0" max="32767" attributes="0"/>
+                              <Component id="vilambu" alignment="0" max="32767" attributes="0"/>
+                          </Group>
+                          <Component id="water" min="-2" pref="58" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -251,12 +244,12 @@
                           <Component id="kichadi" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="rasam" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="paripp" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="water" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="thoran" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="sambaaram" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="water" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="0" pref="32" max="32767" attributes="0"/>
                   </Group>
@@ -309,7 +302,7 @@
               </TableColumnModel>
             </Property>
             <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
-              <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
+              <TableHeader reorderingAllowed="false" resizingAllowed="true"/>
             </Property>
           </Properties>
           <Events>

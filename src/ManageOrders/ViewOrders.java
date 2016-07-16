@@ -15,8 +15,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -120,6 +118,7 @@ public class ViewOrders extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
+        jTable1.getTableHeader().setReorderingAllowed(false);
         jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jTable1MouseClicked(evt);
@@ -250,7 +249,7 @@ public class ViewOrders extends javax.swing.JFrame {
                                 .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, Short.MAX_VALUE))))
                     .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -268,53 +267,47 @@ public class ViewOrders extends javax.swing.JFrame {
                                     .addComponent(injicurry, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(mangoPickle, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(33, 33, 33)))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(sambaaram, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(34, 34, 34)
-                                .addComponent(water, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(84, 84, 84))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(kaalan, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(pappadam, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(34, 34, 34))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(aviyal, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(njalipoovan, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(20, 20, 20))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(sambaaram, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                                .addComponent(kattiparipp, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE)
+                                                .addComponent(kootucurry, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(masaalacurry, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                            .addGap(78, 78, 78))
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addComponent(saambar, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGap(46, 46, 46))
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addComponent(rasam, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGap(46, 46, 46))
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addComponent(aviyal, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGap(46, 46, 46)))
                                     .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(kattiparipp, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE)
-                                            .addComponent(kootucurry, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(masaalacurry, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                        .addGap(78, 78, 78)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(kaayavaruthath, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(sarkkarapuratti, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(paalada, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                        .addComponent(saambar, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(kaalan, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(46, 46, 46)))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(pappadam, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(njalipoovan, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(paripp, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(suchigothamb, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(rasam, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(paripp, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(31, 31, 31)))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(paperRoll, javax.swing.GroupLayout.DEFAULT_SIZE, 107, Short.MAX_VALUE)
-                            .addComponent(paperGlass, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(vazhayila, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(ellunda, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(parippVada, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(vilambu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addComponent(kaayavaruthath, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(sarkkarapuratti, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(paalada, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(paperRoll, javax.swing.GroupLayout.DEFAULT_SIZE, 107, Short.MAX_VALUE)
+                                .addComponent(paperGlass, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(vazhayila, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(ellunda, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(parippVada, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(vilambu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(water, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addContainerGap())))
         );
         layout.setVerticalGroup(
@@ -388,12 +381,12 @@ public class ViewOrders extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(kichadi)
                             .addComponent(rasam)
-                            .addComponent(paripp))
+                            .addComponent(paripp)
+                            .addComponent(water))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(thoran)
-                            .addComponent(sambaaram)
-                            .addComponent(water))
+                            .addComponent(sambaaram))
                         .addGap(0, 32, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -401,8 +394,7 @@ public class ViewOrders extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
-        // TODO add your handling code here:
+    private void loadAllOrdersAndDisplayInTable() {
         Dbcon dbcon = new Dbcon();
         DefaultTableModel dt = new DefaultTableModel(null, new String[]{"date", "name", "count", "user id"});
         try {
@@ -410,17 +402,63 @@ public class ViewOrders extends javax.swing.JFrame {
             ResultSet rs = dbcon.select("select * from tbl_user order by user_id desc");
             while (rs.next()) {
                 dt.addRow(new String[]{rs.getString(4), rs.getString(2), rs.getString(5), rs.getString(1)});
-
             }
             jTable1.setModel(dt);
 
         } catch (Exception e) {
-
+            e.printStackTrace();
         }
+    }
+
+    private void clearAll() {
+        place.setText("");
+        phone1.setText("");
+        phone2.setText("");
+        phone3.setText("");
+        address.setText("");
+        rice.setText("");
+        injicurry.setText("");
+        lemonPickle.setText("");
+        mangoPickle.setText("");
+        pachadi.setText("");
+        oolan.setText("");
+        kichadi.setText("");
+        thoran.setText("");
+        kaalan.setText("");
+        aviyal.setText("");
+        masaalacurry.setText("");
+        kootucurry.setText("");
+        kattiparipp.setText("");
+        saambar.setText("");
+        rasam.setText("");
+        sambaaram.setText("");
+        pappadam.setText("");
+        njalipoovan.setText("");
+        kaayavaruthath.setText("");
+        sarkkarapuratti.setText("");
+        paalada.setText("");
+        suchigothamb.setText("");
+        paripp.setText("");
+        water.setText("");
+        vazhayila.setText("");
+        paperRoll.setText("");
+        paperGlass.setText("");
+        ellunda.setText("");
+        parippVada.setText("");
+        vilambu.setText("");
+
+    }
+
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+        // TODO add your handling code here:
+        clearAll();
+        loadAllOrdersAndDisplayInTable();
+
     }//GEN-LAST:event_formWindowOpened
 
     private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
         // TODO add your handling code here:
+        clearAll();
         Dbcon dbcon = new Dbcon();
         String id = jTable1.getValueAt(jTable1.getSelectedRow(), 3).toString();
         //JOptionPane.showMessageDialog(rootPane,id);
@@ -444,135 +482,134 @@ public class ViewOrders extends javax.swing.JFrame {
             Logger.getLogger(ViewOrders.class.getName()).log(Level.SEVERE, null, ex);
         }
         ResultSet r = dbcon.select("select * from tbl_food where order_id='" + id + "'");
-        String ri,inji,lemon,mango,pachdi,olan,kichdi,toran,kalan,avial,masalacurry,kotucurry,kattiparip,sambar,rasm,sambaram,papadam;
-          String njalipovan,kayavaruthath,sarkarapuratti,palada,suchi,parip,watr,vazha,roll,glass,unda,vada,pathrangal;
+        String ri, inji, lemon, mango, pachdi, olan, kichdi, toran, kalan, avial, masalacurry, kotucurry, kattiparip, sambar, rasm, sambaram, papadam;
+        String njalipovan, kayavaruthath, sarkarapuratti, palada, suchi, parip, watr, vazha, roll, glass, unda, vada, pathrangal;
         try {
             if (r.next()) {
-                ri=r.getString(3);
+                ri = r.getString(3);
                 rice.setText(ri);
-                inji=r.getString(4);
+                inji = r.getString(4);
                 //System.out.println(inji);
-                if(inji.equals("true")){
-                injicurry.setText("inji curry");
+                if (inji.equals("true")) {
+                    injicurry.setText("inji curry");
                 }
-                lemon=r.getString(5);
-                if(lemon.equals("true")){
+                lemon = r.getString(5);
+                if (lemon.equals("true")) {
                     lemonPickle.setText("lemon pickle");
                 }
-                mango=r.getString(6);
-                if(mango.equals("true")){
+                mango = r.getString(6);
+                if (mango.equals("true")) {
                     mangoPickle.setText("mango pickle");
                 }
-                pachdi=r.getString(7);
-                if(pachdi.equals("true")){
+                pachdi = r.getString(7);
+                if (pachdi.equals("true")) {
                     pachadi.setText("pachadi");
                 }
-                olan=r.getString(8);
-                if(olan.equals("true")){
+                olan = r.getString(8);
+                if (olan.equals("true")) {
                     oolan.setText("oolan");
                 }
-                kichdi=r.getString(9);
-                if(kichdi.equals("true")){
+                kichdi = r.getString(9);
+                if (kichdi.equals("true")) {
                     kichadi.setText("kichadi");
                 }
-                 toran=r.getString(10);
-                if(toran.equals("true")){
+                toran = r.getString(10);
+                if (toran.equals("true")) {
                     thoran.setText("thoran");
                 }
-                 kalan=r.getString(11);
-                if(kalan.equals("true")){
+                kalan = r.getString(11);
+                if (kalan.equals("true")) {
                     kaalan.setText("kaalan");
                 }
-                 avial=r.getString(12);
-                if(avial.equals("true")){
+                avial = r.getString(12);
+                if (avial.equals("true")) {
                     aviyal.setText("oolan");
                 }
-                 masalacurry=r.getString(13);
-                if(masalacurry.equals("true")){
+                masalacurry = r.getString(13);
+                if (masalacurry.equals("true")) {
                     masaalacurry.setText("masaala curry");
                 }
-                 kotucurry=r.getString(14);
-                if(kotucurry.equals("true")){
+                kotucurry = r.getString(14);
+                if (kotucurry.equals("true")) {
                     kootucurry.setText("kootu curry");
                 }
-                kattiparip=r.getString(15);
-                if(kattiparip.equals("true")){
+                kattiparip = r.getString(15);
+                if (kattiparip.equals("true")) {
                     kattiparipp.setText("kaalan");
                 }
-                 sambar=r.getString(16);
-                if(sambar.equals("true")){
+                sambar = r.getString(16);
+                if (sambar.equals("true")) {
                     saambar.setText("saambar");
                 }
-                 rasm=r.getString(17);
-                if(rasm.equals("true")){
+                rasm = r.getString(17);
+                if (rasm.equals("true")) {
                     rasam.setText("rasam");
                 }
-                 sambaram=r.getString(18);
-                if( sambaram.equals("true")){
-                     sambaaram.setText("sambaaram");
+                sambaram = r.getString(18);
+                if (sambaram.equals("true")) {
+                    sambaaram.setText("sambaaram");
                 }
-                 papadam=r.getString(19);
-                if(papadam.equals("true")){
+                papadam = r.getString(19);
+                if (papadam.equals("true")) {
                     pappadam.setText("pappadam");
                 }
-                  njalipovan=r.getString(20);
-                if( njalipovan.equals("true")){
-                     njalipoovan.setText("njalipoovan pazham");
+                njalipovan = r.getString(20);
+                if (njalipovan.equals("true")) {
+                    njalipoovan.setText("njalipoovan pazham");
                 }
-                  kayavaruthath=r.getString(21);
-                if(kayavaruthath.equals("true")){
-                     kaayavaruthath.setText("kaayavaruthath");
+                kayavaruthath = r.getString(21);
+                if (kayavaruthath.equals("true")) {
+                    kaayavaruthath.setText("kaayavaruthath");
                 }
-                  sarkarapuratti=r.getString(22);
-                if( sarkarapuratti.equals("true")){
-                     sarkkarapuratti.setText("sarkkarapuratti");
+                sarkarapuratti = r.getString(22);
+                if (sarkarapuratti.equals("true")) {
+                    sarkkarapuratti.setText("sarkkarapuratti");
                 }
-                 palada=r.getString(23);
-                if( palada.equals("true")){
-                     paalada.setText("paalada");
+                palada = r.getString(23);
+                if (palada.equals("true")) {
+                    paalada.setText("paalada");
                 }
-                  suchi=r.getString(24);
-                if( suchi.equals("true")){
-                     suchigothamb.setText("suchigothambu payasam");
+                suchi = r.getString(24);
+                if (suchi.equals("true")) {
+                    suchigothamb.setText("suchigothambu payasam");
                 }
-                   parip=r.getString(25);
-                if(  parip.equals("true")){
-                      paripp.setText(" paripp payasam");
+                parip = r.getString(25);
+                if (parip.equals("true")) {
+                    paripp.setText(" paripp payasam");
                 }
-                   watr=r.getString(26);
-                if( watr.equals("true")){
-                     water.setText("water");
+                watr = r.getString(26);
+                if (watr.equals("true")) {
+                    water.setText("water");
                 }
-                   vazha=r.getString(27);
-                if( vazha.equals("true")){
-                     vazhayila.setText("vazhayila");
+                vazha = r.getString(27);
+                if (vazha.equals("true")) {
+                    vazhayila.setText("vazhayila");
                 }
-                  roll=r.getString(28);
-                if( roll.equals("true")){
-                     paperRoll.setText("paper roll");
+                roll = r.getString(28);
+                if (roll.equals("true")) {
+                    paperRoll.setText("paper roll");
                 }
-                  glass=r.getString(29);
-                if( glass.equals("true")){
-                     paperGlass.setText("paper glass");
+                glass = r.getString(29);
+                if (glass.equals("true")) {
+                    paperGlass.setText("paper glass");
                 }
-                  unda=r.getString(30);
-                if(  unda.equals("true")){
-                      ellunda.setText(" ellunda");
+                unda = r.getString(30);
+                if (unda.equals("true")) {
+                    ellunda.setText(" ellunda");
                 }
-                  vada=r.getString(31);
-                if( vada.equals("true")){
-                     parippVada.setText("paripp vada");
+                vada = r.getString(31);
+                if (vada.equals("true")) {
+                    parippVada.setText("paripp vada");
                 }
-                pathrangal=r.getString(32);
-                if(pathrangal.equals("true")){
-                     vilambu.setText("vilambu pathrangal");
+                pathrangal = r.getString(32);
+                if (pathrangal.equals("true")) {
+                    vilambu.setText("vilambu pathrangal");
                 }
             }
-            
+
         } catch (SQLException ex) {
-           
+
         }
-        
 
 
     }//GEN-LAST:event_jTable1MouseClicked
