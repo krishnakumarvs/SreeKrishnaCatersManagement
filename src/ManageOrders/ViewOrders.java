@@ -13,6 +13,8 @@ package ManageOrders;
 import db.Dbcon;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.table.DefaultTableModel;
@@ -94,13 +96,10 @@ public class ViewOrders extends javax.swing.JFrame {
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
-                "DATE", "NAME", "COUNT", "USERID"
+                "DATE", "NAME", "COUNT", "ID"
             }
         ) {
             Class[] types = new Class [] {
@@ -126,11 +125,11 @@ public class ViewOrders extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jTable1);
         if (jTable1.getColumnModel().getColumnCount() > 0) {
-            jTable1.getColumnModel().getColumn(0).setResizable(false);
             jTable1.getColumnModel().getColumn(0).setPreferredWidth(50);
-            jTable1.getColumnModel().getColumn(2).setMinWidth(50);
             jTable1.getColumnModel().getColumn(2).setPreferredWidth(50);
-            jTable1.getColumnModel().getColumn(2).setMaxWidth(50);
+            jTable1.getColumnModel().getColumn(3).setMinWidth(0);
+            jTable1.getColumnModel().getColumn(3).setPreferredWidth(0);
+            jTable1.getColumnModel().getColumn(3).setMaxWidth(0);
         }
 
         jLabel1.setText("Place");
@@ -396,12 +395,12 @@ public class ViewOrders extends javax.swing.JFrame {
 
     private void loadAllOrdersAndDisplayInTable() {
         Dbcon dbcon = new Dbcon();
-        DefaultTableModel dt = new DefaultTableModel(null, new String[]{"date", "name", "count", "user id"});
+        DefaultTableModel dt = (DefaultTableModel) jTable1.getModel();
         try {
 
             ResultSet rs = dbcon.select("select * from tbl_user order by user_id desc");
             while (rs.next()) {
-                dt.addRow(new String[]{rs.getString(4), rs.getString(2), rs.getString(5), rs.getString(1)});
+                dt.addRow(new String[]{getFormatedDate(rs.getString(4),"MMMM dd YYYY"), rs.getString(2), rs.getString(5), rs.getString(1)});
             }
             jTable1.setModel(dt);
 
@@ -448,6 +447,18 @@ public class ViewOrders extends javax.swing.JFrame {
         vilambu.setText("");
 
     }
+     private String getFormatedDate(String dateString, String format) {
+        long dateMilli = Long.parseLong(dateString);
+
+        Date date = new Date(dateMilli);
+        SimpleDateFormat formatter = new SimpleDateFormat(format);
+
+        String formatted = formatter.format(date);
+
+        System.out.println("formatted " + formatted);
+        return formatted;
+    }
+
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
         // TODO add your handling code here:
