@@ -15,7 +15,8 @@ public class SreeKrishnaCaters {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Dashboard dashboard = new Dashboard();
-        dashboard.setVisible(true);
+        Login login=new Login();
+        login.setVisible(true);
+                
     }
 }
