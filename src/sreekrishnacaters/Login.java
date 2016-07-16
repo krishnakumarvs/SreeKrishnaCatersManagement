@@ -43,6 +43,11 @@ public class Login extends javax.swing.JFrame {
         logged_in = new javax.swing.JCheckBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                formWindowOpened(evt);
+            }
+        });
 
         jLabel1.setText("USER NAME");
 
@@ -136,6 +141,25 @@ public class Login extends javax.swing.JFrame {
         }
         }
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+        // TODO add your handling code here:
+          Dbcon dbcon=new Dbcon();
+       
+        ResultSet rs= dbcon.select("select * from tbl_admin");
+        try {
+            if(rs.next()){
+                if(rs.getString(4).equals("true")) {
+                    logged_in.setSelected(true);
+                } else {
+                    logged_in.setSelected(false);
+                }
+                
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(SreeKrishnaCaters.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_formWindowOpened
 
     private  void clearAll(){
         username_text.setText(null);
