@@ -16,7 +16,9 @@ import db.Dbcon;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -205,7 +207,7 @@ private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FI
             ResultSet rs=dbcon.select("select * from tbl_user order by user_id desc");
             while(rs.next())
             {
-                dt.addRow(new String[]{rs.getString(4),rs.getString(2),rs.getString(3),rs.getString(5)});
+                dt.addRow(new String[]{getFormatedDate(rs.getString(4)),rs.getString(2),rs.getString(3),rs.getString(5)});
                 d.addRow(new String[]{rs.getString(4),rs.getString(2),rs.getString(5)});
                 
             
@@ -222,6 +224,18 @@ private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FI
 
     }//GEN-LAST:event_formWindowOpened
 
+    private String getFormatedDate(String dateString) {
+        long dateMilli= Long.parseLong(dateString);
+
+        Date date = new Date(dateMilli);
+        SimpleDateFormat formatter = new SimpleDateFormat("MMMM dd yyyy");
+
+        String formatted = formatter.format(date);
+
+        System.out.println("formatted " + formatted);
+        return formatted;
+    }
+    
     /**
      * @param args the command line arguments
      */
