@@ -40,7 +40,7 @@ public class Login extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         username_text = new javax.swing.JTextField();
         password_text = new javax.swing.JPasswordField();
-        jCheckBox1 = new javax.swing.JCheckBox();
+        logged_in = new javax.swing.JCheckBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -55,7 +55,7 @@ public class Login extends javax.swing.JFrame {
             }
         });
 
-        jCheckBox1.setText(" Remember me");
+        logged_in.setText("Keep me logged in");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -73,7 +73,7 @@ public class Login extends javax.swing.JFrame {
                         .addComponent(jLabel2)
                         .addGap(60, 60, 60)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jCheckBox1)
+                            .addComponent(logged_in)
                             .addComponent(password_text, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 0, Short.MAX_VALUE))))
             .addGroup(layout.createSequentialGroup()
@@ -93,7 +93,7 @@ public class Login extends javax.swing.JFrame {
                     .addComponent(jLabel2)
                     .addComponent(password_text, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jCheckBox1)
+                .addComponent(logged_in)
                 .addGap(18, 18, 18)
                 .addComponent(jButton1)
                 .addContainerGap(51, Short.MAX_VALUE))
@@ -119,8 +119,8 @@ public class Login extends javax.swing.JFrame {
         try {
             if (rs.next()) {
 
-                rs.getString(1);
-                rs.getString(2);
+                dbcon.update("update tbl_admin set logged_in='"+logged_in.isSelected()+"' , last_login='"+System.currentTimeMillis()+"'");
+                
                 this.dispose();
                 Dashboard dashboard = new Dashboard();
                 dashboard.setVisible(true);
@@ -178,9 +178,9 @@ public class Login extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JCheckBox logged_in;
     private javax.swing.JPasswordField password_text;
     private javax.swing.JTextField username_text;
     // End of variables declaration//GEN-END:variables

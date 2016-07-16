@@ -36,7 +36,7 @@
                       <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jCheckBox1" min="-2" max="-2" attributes="0"/>
+                          <Component id="logged_in" min="-2" max="-2" attributes="0"/>
                           <Component id="password_text" min="-2" pref="155" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -64,7 +64,7 @@
                   <Component id="password_text" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="jCheckBox1" min="-2" max="-2" attributes="0"/>
+              <Component id="logged_in" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="jButton1" min="-2" max="-2" attributes="0"/>
               <EmptySpace pref="51" max="32767" attributes="0"/>
@@ -95,9 +95,9 @@
     </Component>
     <Component class="javax.swing.JPasswordField" name="password_text">
     </Component>
-    <Component class="javax.swing.JCheckBox" name="jCheckBox1">
+    <Component class="javax.swing.JCheckBox" name="logged_in">
       <Properties>
-        <Property name="text" type="java.lang.String" value=" Remember me"/>
+        <Property name="text" type="java.lang.String" value="Keep me logged in"/>
       </Properties>
     </Component>
   </SubComponents>
